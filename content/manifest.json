@@ -1,0 +1,33 @@
+{
+  "manifest_version": 3,
+  "name": "Stream Translator",
+  "version": "1.0",
+  "key":"MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDYwedDt5CcDJgKu4tkDNkA3yZcDT2pojWjOPNFfAOqZXHm39LqA9pyVe+fmgPnAVJ8rp9Aq4gHMRsAyZJmC2/BRWRA5u1EVWRQaEsnFH2yPxpD/eqMVNdVBQ+solxP/CUQcYVTiDopNX+tFwrtR1CIy8lrFXQ3QIA6kGzQbeGwY9d2h1ARdI7yYOi5gW0weZe7Fm2MICrCPUh1rHs12rLDgbHxMWs/BJPr+BBs6fFLp7YXjLpZp5EJbDjaRf/J0Uj4cXQd+XTPDjXaznRHS78lAgMBAAECggEAAVjqaA6ER24r8YCaEOhO3rzRJ8pTA0xJp8w+QlXgX0o1Z1c25D3TBgSVMluKSjPvvAXvlQMovcyRxkzUJzcdo+p9rPpvH02RIugWsO8pjZoRsS3AawLtXN/U2XHsIQ6bUXc6QLh5QnQ+AHQmALZP0eNLXd613XJfXlrZNHk3KqspR7oSFEirunF2tutgRPgMGgABSj1Dw84E4ny7+JiV5TILve2fIb39mzOojiU8qdoa6j8MnotsJgyTLF+BHpICromyxihu13z3BnwlldOBdedHrbW0vfynYzTlxDQh6fRoisZsi0WYPg36CWHOc/2EqYhXAvoyhHj/l2hqJ5zNAQKBgQD2lAPL+UF0rVFLy1PhC+VjWgk+AkfG4yvxNjvKNNRtpvrepNgSr9D+tFlpMyhviv6GnKEfcPIx0WWsCJHio6B01YzQl067GCRHBU47YE2JWIprqV6lPd1gt4fR9PFb186G9+0/0UcbcPhNVVGnktZiA//7+rrP7/3OjY3Qvd7NpQKBgQDhCi/oryKLM2Kuy+dykL8WutgU+Td7a6CYTj+IsryFuCWAMEc7AiHYCtsk6yNhKiDxXGIIU+YUD4nKv4zXUWFYrjTkysBCZ4sJHcS+VRtR92+GWDbJTDXxM/dPT0qlMTNCsu0umbfNOuOYzW1GDiaAvaSjJzK6Z0FL9hX9/gFzgQKBgAkXC8zJM5CJkyWoKT9yoNI4z35ptxut5EDQLwQVTn98WGM80Hpf4OSC4YjvSd5S0W9E9uuhzkvn3EerSTWBsrib5sUJzu02xp+Xonqt4i3eBbxSUhrlXPPj0C39SaiJHCP9n9FqdaSdVYoESy5SS3TxkM5JP/nKbyDeNwwq87vBAoGBALUdZsuFUG7pz01Q7BhnaHOZstjGbqHVUC3kI/wXpeSU/RF7SYizQZvHuPGwkQvdRSAbswZyx6RzkPltSqPsakVeB1Hv3+ZRwTN4EuUAR/mjA84C5y0BOhTDNxJMhY4H1/KhYIR10NjKwWw0QPL15oUMnBl3LbuZ6JKDHtYJfQ+BAoGBAPJJBPWWG4QCyHSkQ3c0zJ07RcCEUd+DxkYjkJyIItTRn4xTJo2O7u2ii5GFAyai2cu1EFSWebvl0Mg9CrkloL70hFYDvBkP602JlYjXDlsFeeswvB4tKZG7FdqAwRGWQMk8NNDtq1OGYeyHpTVGxQEPxh0IXNsL5yqnmbOrKOX5", 
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'",
+    "sandbox": "sandbox allow-scripts allow-forms",
+    "web_accessible_resources": [
+      "home_popup.js"
+    ]
+  },
+  "description": "Automated live stream/video call transcription and translation",
+  "permissions": ["identity","activeTab", "storage"],
+  "icons": {
+    "48": "ST Logo.png"
+  },
+  "action": {
+    "default_icon": "ST Logo.png",
+    "default_popup": "signin_popup.html",
+    "default_title": "Stream Translator"
+  },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}

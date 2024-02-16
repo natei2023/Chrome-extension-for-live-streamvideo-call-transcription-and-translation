@@ -1,0 +1,83 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stream Translator</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="all.min.css">
+  <script src="all.min.js"></script>
+</head>
+<style>
+  body{
+    background-image: url('Dark-Plain-36.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  h1{
+    margin-left: 40px;
+    margin-top: 2px;
+    color: white;
+  }
+</style>
+<body>
+  <div id="mySidebar" class="sidepanel">
+    <div class="dropdown">
+      <div class="green-circle letter-n" id="dropdownBtn">
+        <p class="letter-n" id="dropdownBtn">N</p>
+      </div>
+      <div id="dropdown-content" class="dropdown-content">
+        <a href="#"><i class="fa-solid fa-gear"></i> Setting</a>
+        <p id="myBtn" style="color: darkorange;"><i class="fa-solid fa-star"></i> Upgrade to pro</p>
+        <a href="#" id="signout-btn"><i class="fa-solid fa-sign-out"></i> Sign out</a>
+      </div>
+    </div>
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Upgrade to pro</h2>
+        <p>This is a simple modal example.</p>
+        <h3>Get more pro features.</h3>
+      </div>
+    
+    </div>
+    
+    <p class="closebtn" id="closeBtn"><img src="sidebar.png"></p>
+    <a href="#"><i class="fa-solid fa-house"></i> Home</a>
+    <a href="#"><i class="fa-solid fa-circle-question"></i> About</a>
+    <a href="#"><i class="fa-solid fa-star"></i> Transcripts</a>
+    <a href="#"><i class="fa-solid fa-puzzle-piece"></i> Integration</a>
+    <a href="contact.html"><i class="fa-solid fa-phone"></i> Contact</a>
+    <div class="social-media">
+      <i class="fa-brands fa-facebook" style="font-size: 20px; color: black;margin-left: 5px;"></i>
+      <i class="fa-brands fa-x-twitter" style="font-size: 20px; color:black;margin-left: 5px;"></i>
+      <i class="fa-brands fa-instagram" style="font-size: 20px; color:black;margin-left: 5px;"></i>
+    </div>
+  </div>
+
+  
+  <img src="sidebar32.png" class="openbtn" id="openBtn">
+  <h1 class="inline">Stream Translator</h1>
+  <p class="s_lang">Select Language</p>
+  <select id="target-language" class="opt-s">
+    <option value="en">English</option>
+    <option value="es">Spanish</option>
+    <!-- Populate with language options -->
+  </select>
+  <button id="start-translation" class="start-translation">Start Translation</button>
+  <div id="userProfile" style="display: block;">
+    <p>Welcome, <span id="userProfile"></span>!</p>
+    <p id="user-name"></p>
+    <p id="user-email"></p>
+  </div>
+  <footer>
+    <p>
+      By using this extension you agree to our 
+      <br><a href="" class="terms">Terms and Condition</a>.
+    </p>
+  </footer>
+  <script src="home_popup.js" defer></script>
+  
+</body>
+</html>

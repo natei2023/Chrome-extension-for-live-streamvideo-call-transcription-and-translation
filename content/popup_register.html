@@ -1,0 +1,34 @@
+<!-- popup.html -->
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Stream Translator</title>
+  <link rel="stylesheet" type="text/css" href="popup.css">
+  <link rel="stylesheet" href="all.min.css">
+  <script src="all.min.js"></script>
+</head>
+<body>
+  <h1 align="center">Sign up for FREE</h1>
+  <p class="j_world">Join a World of Translators</p>
+  <!-- Login Form -->
+  <div id="registerForm">
+    <form id="register-Form" class="registerForm">
+        <i class="fa-regular fa-envelope" style="position: absolute; left: 90%; margin-top: 15px;font-size: 16px;"></i><input type="email" id="register-email" name="email" placeholder="Enter Email" required>
+        <i class="fa-solid fa-eye-slash" style="position: absolute; left: 90%; margin-top: 15px;font-size: 16px;"></i><input type="password" id="register-password" name="password" placeholder="Enter Password" required>
+        <button type="submit" id="registerButton" class="registerButton">Create Account</button>
+        <p id="message" class="error"></p>
+        <!-- Link to the registration page -->
+        <p>___________________ Or continue with google ____________________</p>
+        <!-- Google Login Button -->
+        <button id="login" class="googleRegisterButton"><img src="google.webp" width="12px"> Continue with Google</button>
+        <p class="A-login">Already signed up? <a href="signin_popup.html">Go to login</a>.</p>
+    </form>
+    </div>
+  
+  
+
+  <script src="popup.js" defer></script>
+  <script src="node_modules/server.js" defer></script>
+  
+</body>
+</html>
